@@ -1,5 +1,6 @@
 import io
 import pandas as pd
+import json
 import requests
 if 'data_loader' not in globals():
     from mage_ai.data_preparation.decorators import data_loader
@@ -15,8 +16,9 @@ def load_data_from_api(*args, **kwargs):
     url = 'https://remotive.com/api/remote-jobs'
 
     response = requests.get(url)
-    return pd.read_json(io.StringIO(response.text), sep=',')
-
+    jobs = response.json()["jobs"]
+    jobs_json = json.dumps(jobs)
+    return pd.read_json(io.StringIO(jobs_json))
 
 @test
 def test_output(df, *args) -> None:
