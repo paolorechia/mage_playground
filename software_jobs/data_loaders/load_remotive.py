@@ -21,10 +21,10 @@ def load_data_from_api(*args, **kwargs):
     url = 'https://remotive.com/api/remote-jobs'
 
     if remotive_file_exists():
-        logger.info("Skipping pull")
+        print("Skipping pull")
         return FileIO().load(get_today_remotive_path())
 
-    logger.info("File %s not found, pulling from API", get_today_remotive_path())
+    print("File %s not found, pulling from API", get_today_remotive_path())
     response = requests.get(url)
     jobs = response.json()["jobs"]
     jobs_json = json.dumps(jobs)

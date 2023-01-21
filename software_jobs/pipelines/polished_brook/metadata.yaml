@@ -8,11 +8,11 @@ blocks:
   executor_type: local_python
   language: python
   name: load_remotive
-  status: updated
+  status: executed
   type: data_loader
   upstream_blocks: []
   uuid: load_remotive
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   configuration: {}
   downstream_blocks: []
   executor_config: null
