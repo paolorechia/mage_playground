@@ -1,6 +1,7 @@
 blocks:
 - all_upstream_blocks_executed: true
-  configuration: {}
+  configuration:
+    dynamic: false
   downstream_blocks:
   - export_remotive
   executor_config: null
@@ -18,7 +19,7 @@ blocks:
   executor_type: local_python
   language: python
   name: export_remotive
-  status: updated
+  status: executed
   type: data_exporter
   upstream_blocks:
   - load_remotive
