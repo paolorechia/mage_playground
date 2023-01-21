@@ -1,0 +1,6 @@
+blocks: []
+data_integration: null
+name: example_pipeline
+type: python
+uuid: example_pipeline
+widgets: []

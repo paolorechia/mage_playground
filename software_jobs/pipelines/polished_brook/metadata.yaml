@@ -1,0 +1,30 @@
+blocks:
+- all_upstream_blocks_executed: true
+  configuration: {}
+  downstream_blocks:
+  - export_remotive
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: load_remotive
+  status: updated
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_remotive
+- all_upstream_blocks_executed: false
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  language: python
+  name: export_remotive
+  status: updated
+  type: data_exporter
+  upstream_blocks:
+  - load_remotive
+  uuid: export_remotive
+data_integration: null
+name: polished brook
+type: python
+uuid: polished_brook
+widgets: []
